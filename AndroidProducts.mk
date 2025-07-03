@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_light.mk
+    $(LOCAL_DIR)/infinity_light.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_light-user \
-    aosp_light-userdebug \
-    aosp_light-eng
+    infinity_light-user \
+    infinity_light-userdebug \
+    infinity_light-eng
