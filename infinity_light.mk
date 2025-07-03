@@ -7,18 +7,20 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/light/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common infinity-x stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_USES_AOSP_RECOVERY := true
-TARGET_SUPPORTS_QUICK_TAP := true
+# Infinity-x build flags
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := Sryngtys
 
-PRODUCT_NAME := aosp_light
+PRODUCT_NAME := infinity_light
 PRODUCT_DEVICE := light
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
